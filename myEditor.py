@@ -3,8 +3,6 @@ class TextEditor:
     def __init__(self, document, size = 10):
         self.document = document
         self.dictionary = set()
-        # On windows, the dictionary can often be found at:
-        # C:/Users/{username}/AppData/Roaming/Microsoft/Spelling/en-US/default.dic
         with open("/usr/share/dict/words") as input_dictionary:
             for line in input_dictionary:
                 words = line.strip().split(" ")
